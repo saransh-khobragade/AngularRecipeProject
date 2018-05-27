@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/']">Reciepe Book</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+          <ul class="nav navbar-nav">                        
+              <li routerLinkActive="active" class="nav-item"><a class="nav-link" [routerLink]="['/recipes']">Reciepes</a></li>
+              <li routerLinkActive="active" class="nav-item"><a class="nav-link" [routerLink]="['/shopping-list']">Shopping list</a></li>                        
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown" dpDropdown>
+                  <a 
+                  class="dropdown-toggle" 
+                  role="button" 
+                  aria-haspopup="true" 
+                  aria-expanded="false"
+                  >Recipes Management </a>
+                  <ul class="dropdown-menu">
+                    <li><a (click)="onStore()" style="cursor: pointer;">Store Recipes</a></li>
+                    <li><a (click)="onFetch()" style="cursor: pointer;">Retrieve Recipes</a></li>
+                  </ul>
+                </li>
+          </ul>
+          
+        
+  </div>
+</nav>
